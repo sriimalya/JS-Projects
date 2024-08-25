@@ -18,7 +18,7 @@ body{
 
 .container {
     width: 80%;
-    max-width: 1200px;
+    height: 70vh;
     margin: auto;
     background: white;
     border-radius: 10px;
@@ -32,7 +32,6 @@ body{
     flex-direction: column;
     gap: 24px;
     width: 50%;
-    /* padding: 24px 32px; */
 }
 
 .bmi-form, .bmi-result {
@@ -57,13 +56,14 @@ body{
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+    font-size: 14px;
 }
 
 .form-grp span {
     color: red;
 }
 
-.form-grp input, .form-grp select {
+.form-grp input {
     width: 100%;
     padding: 10px;
     border: 1px solid #e0e0e0;
@@ -77,6 +77,21 @@ body{
 
 .height-inputs input, .height-inputs select {
     flex: 1;
+}
+
+.bmi-value span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.bmi {
+    font-size: 32px;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
 }
 
 #calculate-bmi{
@@ -95,26 +110,37 @@ body{
     display: flex;
     flex-direction: column;
     height: 100%;
-    justify-content: space-between;
+    gap: 24px;
+}
+
+.bmi-result-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap:32px;
 }
 
 
 .bmi-result h2 {
     font-size: 24px;
-    margin-bottom: 20px;
 }
 
 .bmi-result p{
     font-size: 18px;
 }
 
-.bmi-meter {
+.bmi-meter{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.bmi-meter-band {
     width: 100%;
     height: 50px;
     background: linear-gradient(90deg, #007bff 0%, #28a745 33%, #ffc107 66%, #dc3545 100%);
     position: relative;
     border-radius: 5px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .bmi-needle {
@@ -122,50 +148,23 @@ body{
     height: 100%;
     background: black;
     position: absolute;
-    left: 30%; /* Example position, you can adjust this based on the BMI value */
+    left: 0%; 
     top: 0;
 }
 
-
-.bmi-value {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.bmi-value span {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-#bmi-value {
-    font-size: 32px;
-    font-weight: bold;
-}
-
-/* .bmi-info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.bmi-info div {
-    flex: 1;
-    text-align: center;
-} */
 
 .bmi-category {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     gap: 2px;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .each-category{
     align-items: center;
     display: flex;
-    gap: 4px;
+    gap: 2px;
 }
 
 /* .bmi-category div {
@@ -175,6 +174,8 @@ body{
 .each-category p {
     margin: 0;
     padding: 5px 0;
+    font-size: 14px;
+    font-weight:600;
 }
 
 .each-category span {
@@ -204,22 +205,41 @@ body{
 .bmi-info{
     display: flex;
     gap: 24px;
-    margin: 40px 0;
+    /* margin: 40px 0; */
     text-align: center;
-    justify-content: space-between;
-    /* font-size: 18px; */
+    justify-content: space-around;
 }
 
+.bmi-info-heading p{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.bmi-info-heading div{
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
 
 .bmi-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
     text-align: center;
+}
+
+.bmi-message img{
+    width: 50px;
+    height: auto;
 }
 
 .bmi-message h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
 .bmi-message p {
     font-size: 14px;
+    font-weight: 500;
 }

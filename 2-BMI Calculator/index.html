@@ -20,24 +20,12 @@
                 <div class="bmi-form">
                     <h2>BMI Calculator</h2>
                     <form>
-                        <div class="form-grp">
-                            <label for="gender">Gender<span>*</span></label>
-                            <select id="gender" required>
-                                <option value="female">Female</option>
-                                <option value="male">Male</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
 
                         <div class="form-grp">
-                            <label for="height">Your Height</label>
+                            <label for="height">Your Height<span>*</span></label>
                             <div class="height-inputs">
                                 <input type="number" id="feet" placeholder="Feet" required>
                                 <input type="number" id="inches" placeholder="Inch" required>
-                                <select id="height-unit">
-                                    <option value="foot">Foot & Inch</option>
-                                    <option value="cm">Centimeters</option>
-                                </select>
                             </div>
                         </div>
 
@@ -45,8 +33,13 @@
                             <label for="weight">Weight In Kgs<span>*</span></label>
                             <input type="number" id="weight" required>
                         </div>
-                        <div class="calculate-button">
+                        <div class=" form-grp calculate-button">
                             <button id="calculate-bmi">Calculate</button>
+                        </div>
+
+                        <div class="form-grp">
+                            <label>YOUR BMI VALUE</label>
+                            <div class="bmi" id="bmi-value">00.00</div>
                         </div>
                     </form>
                 </div>
@@ -56,55 +49,49 @@
                 <div class="title">
                     <h2>Your BMI Result</h2>
                 </div>
-
-                <div class="bmi-meter">
-                    <div class="bmi-needle"></div>
-                </div>
-
-                <div class="bmi-value">
-                    <span>YOUR BMI VALUE</span>
-                    <div id="bmi-value">19.15</div>
-                </div>
-
-                <div class="bmi-category">
-                    <div class="each-category">
-                        <p>Under Weight</p>
-                        <span color="blue"></span>
-                    </div>
-                    <div class="each-category">
-                        <p>Normal</p>
-                        <span color="green"></span>
-                    </div>
-                    <div class="each-category">
-                        <p>Over Weight</p>
-                        <span color="orange"></span>
-                    </div>
-                    <div class="each-category">
-                        <p>Obesity</p>
-                        <span color="red"></span>
-                    </div>
-                </div>
-
-                <div class="bmi-info">
-                    <div class="bmi-range">
-                        <p>Healthy BMI Range</p>
-                        <div>18.5Kg/m2 - 24.9Kg/m2</div>
+                <div class="bmi-result-info">
+                    <div class="bmi-meter">
+                        <div class="bmi-meter-band">
+                            <div class="bmi-needle"></div>
+                        </div>
+                        <div class="bmi-category">
+                            <div class="each-category">
+                                <p>Under Weight</p>
+                                <span color="blue"></span>
+                            </div>
+                            <div class="each-category">
+                                <p>Normal</p>
+                                <span color="green"></span>
+                            </div>
+                            <div class="each-category">
+                                <p>Over Weight</p>
+                                <span color="orange"></span>
+                            </div>
+                            <div class="each-category">
+                                <p>Obesity</p>
+                                <span color="red"></span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="bmi-weight-range">
-                        <p>Healthy weight for this height</p>
-                        <div>42 - 56 Kg</div>
+
+                    <div class="bmi-info">
+                        <div class="bmi-range bmi-info-heading">
+                            <p>Healthy BMI Range</p>
+                            <div>18.5Kg/m<sup>2</sup> - 24.9Kg/m<sup>2</sup></div>
+                        </div>
+
+                        <div class="bmi-weight-range bmi-info-heading">
+                            <p>Healthy Weight for this Height</p>
+                            <div>42 - 56 Kg</div>
+                        </div>
                     </div>
 
-                    <div class="bmi-action">
-                        <p>Action</p>
-                        <div>N/A</div>
+                    <div class="bmi-message">
+                        <img src="">
+                        <h3></h3>
+                        <p></p>
                     </div>
-                </div>
-
-                <div class="bmi-message">
-                    <h3>GOOD JOB!</h3>
-                    <p>You’re managing a healthy weight, so make sure you do not tip on either side of the scale.</p>
                 </div>
             </div>
         </div>
